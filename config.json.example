@@ -1,0 +1,25 @@
+{
+  "actions": [
+    {
+      "name": "Browser tab",
+      "xCoordinate": 170,
+      "yCoordinate": 39,
+      "delayAfter": 1000,
+      "scrollAfterDelay": 0
+    },
+    {
+      "name": "Anchor",
+      "xCoordinate": 375,
+      "yCoordinate": 722,
+      "delayAfter": 1200,
+      "scrollAfterDelay": -1000
+    },
+    {
+      "name": "Link",
+      "xCoordinate": 454,
+      "yCoordinate": 718,
+      "delayAfter": 1000,
+      "scrollAfterDelay": 0
+    }
+  ]
+}
