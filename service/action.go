@@ -22,7 +22,7 @@ func (c Action) FillActions(ctx context.Context) []model.Action {
 		case <-ctx.Done():
 			return actionList
 		default:
-			addAction(actionList)
+			actionList = append(actionList, addAction(i))
 		}
 		i++
 	}
@@ -30,14 +30,14 @@ func (c Action) FillActions(ctx context.Context) []model.Action {
 	return actionList
 }
 
-func addAction(actionList []model.Action) {
+func addAction(i int) model.Action {
 	x, y := robotgo.GetMousePos()
 	fmt.Println("pos:", x, y)
-	actionList = append(actionList, model.Action{
-		Name:             strconv.Itoa(len(actionList) + 1),
+	return model.Action{
+		Name:             strconv.Itoa(i),
 		XCoordinate:      x,
 		YCoordinate:      y,
 		DelayAfter:       0,
 		ScrollAfterDelay: 0,
-	})
+	}
 }
