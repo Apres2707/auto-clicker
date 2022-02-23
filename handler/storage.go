@@ -3,5 +3,6 @@ package handler
 import "auto-clicker/model"
 
 type Storage interface {
-	Save(config model.Config) error
+	SaveConfig(config model.Config) error
+	GetConfig() (model.Config, error)
 }
